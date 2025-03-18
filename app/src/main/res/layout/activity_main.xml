@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/titleText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오늘 하루는 어땠나요?"
@@ -17,13 +17,13 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/titleText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="감정우표를 선택해주세요"
@@ -32,13 +32,12 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintVertical_bias="0.226" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/descriptionText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="선택된 감정우표를 기반으로 맞춤형 질문이 배달됩니다"
@@ -49,6 +48,31 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.296" />
+
+    <ImageView
+        android:id="@+id/emotionStamp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/happystamp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionText1"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/descriptionText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="더없이 행복한 하루였어요"
+        android:textColor="@android:color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
