@@ -14,7 +14,8 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<ImageView>(R.id.emotionStamp1).setOnClickListener {
-            startActivity(Intent(this, HappyActivity::class.java))
+            val intent = Intent(this, HappyActivity::class.java)
+            startActivity(intent)
         }
     }
 }
