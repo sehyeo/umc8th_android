@@ -24,7 +24,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.HappyActivity"
+            android:name=".HappyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ExcitedActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NormalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WorriedActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AngryActivity"
             android:exported="true" />
     </application>
 

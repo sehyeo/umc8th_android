@@ -5,7 +5,6 @@ import android.widget.ImageView
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import android.content.Intent
-import com.example.umc8th.ui.HappyActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +14,26 @@ class MainActivity : ComponentActivity() {
 
         findViewById<ImageView>(R.id.emotionStamp1).setOnClickListener {
             val intent = Intent(this, HappyActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageView>(R.id.emotionStamp2).setOnClickListener {
+            val intent = Intent(this, ExcitedActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageView>(R.id.emotionStamp3).setOnClickListener {
+            val intent = Intent(this, NormalActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageView>(R.id.emotionStamp4).setOnClickListener {
+            val intent = Intent(this, WorriedActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageView>(R.id.emotionStamp5).setOnClickListener {
+            val intent = Intent(this, AngryActivity::class.java)
             startActivity(intent)
         }
     }
