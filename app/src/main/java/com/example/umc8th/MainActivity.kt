@@ -1,47 +1,32 @@
 package com.example.umc8th
 
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.umc8th.ui.theme.Umc8thTheme
+import android.content.Intent
+import com.example.umc8th.databinding.ActivityMainBinding
 
 class MainActivity : ComponentActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
-            Umc8thTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // 감정 스탬프 클릭 시 EmotionActivity로 이동 (Intent에 감정 타입 전달)
+        binding.emotionStamp1.setOnClickListener { navigateToEmotionActivity("happy") }
+        binding.emotionStamp2.setOnClickListener { navigateToEmotionActivity("excited") }
+        binding.emotionStamp3.setOnClickListener { navigateToEmotionActivity("normal") }
+        binding.emotionStamp4.setOnClickListener { navigateToEmotionActivity("worried") }
+        binding.emotionStamp5.setOnClickListener { navigateToEmotionActivity("angry") }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Umc8thTheme {
-        Greeting("Android")
+    private fun navigateToEmotionActivity(emotion: String) {
+        val intent = Intent(this, EmotionActivity::class.java)
+        intent.putExtra("emotion_type", emotion)
+        startActivity(intent)
     }
 }
