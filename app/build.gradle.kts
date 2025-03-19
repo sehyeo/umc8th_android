@@ -8,6 +8,10 @@ android {
     namespace = "com.example.umc8th"
     compileSdk = 35
 
+    viewBinding {
+        enable = true
+    }
+
     defaultConfig {
         applicationId = "com.example.umc8th"
         minSdk = 30

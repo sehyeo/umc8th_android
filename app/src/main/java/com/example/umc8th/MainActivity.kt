@@ -5,39 +5,28 @@ import android.widget.ImageView
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import android.content.Intent
+import com.example.umc8th.databinding.ActivityMainBinding
 
 class MainActivity : ComponentActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // 감정 스탬프 클릭 시 EmotionActivity로 이동 (Intent에 감정 타입 전달)
-        findViewById<ImageView>(R.id.emotionStamp1).setOnClickListener {
-            navigateToEmotionActivity("happy")
-        }
-
-        findViewById<ImageView>(R.id.emotionStamp2).setOnClickListener {
-            navigateToEmotionActivity("excited")
-        }
-
-        findViewById<ImageView>(R.id.emotionStamp3).setOnClickListener {
-            navigateToEmotionActivity("normal")
-        }
-
-        findViewById<ImageView>(R.id.emotionStamp4).setOnClickListener {
-            navigateToEmotionActivity("worried")
-        }
-
-        findViewById<ImageView>(R.id.emotionStamp5).setOnClickListener {
-            navigateToEmotionActivity("angry")
-        }
+        binding.emotionStamp1.setOnClickListener { navigateToEmotionActivity("happy") }
+        binding.emotionStamp2.setOnClickListener { navigateToEmotionActivity("excited") }
+        binding.emotionStamp3.setOnClickListener { navigateToEmotionActivity("normal") }
+        binding.emotionStamp4.setOnClickListener { navigateToEmotionActivity("worried") }
+        binding.emotionStamp5.setOnClickListener { navigateToEmotionActivity("angry") }
     }
 
-    // EmotionActivity로 이동하는 함수 (감정 타입 전달)
     private fun navigateToEmotionActivity(emotion: String) {
         val intent = Intent(this, EmotionActivity::class.java)
-        intent.putExtra("emotion_type", emotion) // 감정 데이터 전달
+        intent.putExtra("emotion_type", emotion)
         startActivity(intent)
     }
 }
