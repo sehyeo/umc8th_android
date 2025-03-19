@@ -23,21 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".HappyActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ExcitedActivity"
-            android:exported="true" />
-        <activity
-            android:name=".NormalActivity"
-            android:exported="true" />
-        <activity
-            android:name=".WorriedActivity"
-            android:exported="true" />
-        <activity
-            android:name=".AngryActivity"
-            android:exported="true" />
+        <activity android:name=".EmotionActivity" android:exported="true"/>
+
     </application>
 
 </manifest>
