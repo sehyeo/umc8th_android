@@ -8,8 +8,6 @@
 
     <!-- 상단 로고 -->
 
-    <!-- 중앙 날짜 및 멘트 -->
-
     <TextView
         android:id="@+id/appTitle"
         android:layout_width="60dp"
@@ -33,11 +31,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 중앙 날짜 및 멘트 -->
 
     <TextView
         android:id="@+id/dateText"
         android:layout_width="150dp"
-        android:layout_height="20dp"
+        android:layout_height="23dp"
         android:layout_marginTop="48dp"
         android:background="@color/light_gray"
         android:fontFamily="@font/bmyeonsung"
