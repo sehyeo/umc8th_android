@@ -25,7 +25,7 @@ class SongActivity : AppCompatActivity() {
 
         binding.icArrowBottom.setOnClickListener {
             val returnIntent = Intent().apply {
-                putExtra(MainActivity.INTENT_KEY_RETURN_TITLE, "라일락")
+                putExtra(MainActivity.INTENT_KEY_RETURN_TITLE, "Journey")
             }
             setResult(Activity.RESULT_OK, returnIntent)
             finish()

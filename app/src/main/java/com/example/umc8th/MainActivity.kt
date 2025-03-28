@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainPlayerCl.setOnClickListener {
             val intent = Intent(this, SongActivity::class.java).apply {
-                putExtra("title", "라일락")
-                putExtra("singer", "아이유 (IU)")
+                putExtra("title", "Journey")
+                putExtra("singer", "WOODZ")
             }
             getResultText.launch(intent)
         }
