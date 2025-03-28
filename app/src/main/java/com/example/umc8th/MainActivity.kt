@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+    private val getResultText = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data = result.data
             val albumTitle = data?.getStringExtra(INTENT_KEY_RETURN_TITLE)
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 putExtra("title", "라일락")
                 putExtra("singer", "아이유 (IU)")
             }
-            getResult.launch(intent)
+            getResultText.launch(intent)
         }
     }
 }
