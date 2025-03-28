@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/nav_graph">
+             android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.umc8th.HomeFragment"
+        android:label="홈" />
 
+    <fragment
+        android:id="@+id/navigation_compass"
+        android:name="com.example.umc8th.CompassFragment"
+        android:label="둘러보기" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.umc8th.SearchFragment"
+        android:label="검색" />
+
+    <fragment
+        android:id="@+id/navigation_mypage"
+        android:name="com.example.umc8th.MypageFragment"
+        android:label="보관함" />
 
 </navigation>

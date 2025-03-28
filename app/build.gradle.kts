@@ -12,6 +12,10 @@ android {
         enable = true
     }
 
+    buildFeatures{
+        dataBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.umc8th"
         minSdk = 30
@@ -66,4 +70,5 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
     implementation("com.google.android.material:material:1.9.0")
+    implementation("me.relex:circleindicator:2.1.6")
 }
