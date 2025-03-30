@@ -31,5 +31,12 @@ class HomeFragment : Fragment() {
             }
             findNavController().navigate(R.id.albumFragment, bundle)
         }
+        val bannerImages = listOf(
+            R.drawable.img_home_viewpager_exp,
+            R.drawable.img_home_viewpager_exp2
+        )
+
+        val adapter = BannerAdapter(bannerImages)
+        binding.bannerViewPager.adapter = adapter
     }
 }
