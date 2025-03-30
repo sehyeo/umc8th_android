@@ -33,6 +33,14 @@ class AlbumFragment : Fragment() {
         binding.btnArrowLeft.setOnClickListener {
             findNavController().navigate(R.id.action_albumFragment_to_navigation_home)
         }
+
+        binding.switchMix.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                binding.albumImage.setImageResource(R.drawable.woodz_album_mix)
+            } else {
+                binding.albumImage.setImageResource(R.drawable.woodz_album)
+            }
+        }
     }
 
 }
