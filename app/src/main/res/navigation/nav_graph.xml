@@ -28,6 +28,12 @@
         android:id="@+id/albumFragment"
         android:name="com.example.umc8th.AlbumFragment"
         android:label="Album"
-        tools:layout="@layout/fragment_album" />
+        tools:layout="@layout/fragment_album">
+
+        <action
+            android:id="@+id/action_albumFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+
+    </fragment>
 
 </navigation>

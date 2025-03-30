@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.umc8th.databinding.FragmentAlbumBinding
 
 class AlbumFragment : Fragment() {
@@ -20,4 +21,13 @@ class AlbumFragment : Fragment() {
 
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnArrowLeft.setOnClickListener {
+            findNavController().navigate(R.id.action_albumFragment_to_navigation_home)
+        }
+    }
+
 }
