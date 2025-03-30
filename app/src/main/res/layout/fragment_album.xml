@@ -39,6 +39,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/albumTitleTextView"
         android:layout_width="330dp"
         android:layout_height="32dp"
         android:layout_marginStart="40dp"
@@ -116,8 +117,6 @@
             android:textSize="16sp" />
     </LinearLayout>
 
-    <!-- 상단 옵션 바 -->
-
     <LinearLayout
         android:id="@+id/trackOptions"
         android:layout_width="0dp"
@@ -132,7 +131,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/menuTabs">
 
-        <!-- 전체선택 -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -151,8 +149,6 @@
                 android:text="전체선택"
                 android:textSize="12sp" />
         </LinearLayout>
-
-        <!-- 전체듣기 -->
 
         <LinearLayout
             android:layout_width="0dp"

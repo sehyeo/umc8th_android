@@ -3,6 +3,7 @@ package com.example.umc8th
 import android.content.Intent
 import android.os.Bundle
 import android.app.Activity
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.umc8th.databinding.ActivitySongBinding
@@ -30,5 +31,16 @@ class SongActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK, returnIntent)
             finish()
         }
+
+        binding.mainMiniplayerBtn.setOnClickListener {
+            binding.mainMiniplayerBtn.visibility = View.GONE
+            binding.mainPauseBtn.visibility = View.VISIBLE
+        }
+
+        binding.mainPauseBtn.setOnClickListener {
+            binding.mainPauseBtn.visibility = View.GONE
+            binding.mainMiniplayerBtn.visibility = View.VISIBLE
+        }
+
     }
 }

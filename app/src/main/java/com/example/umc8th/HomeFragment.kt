@@ -26,7 +26,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.homeAlbum.setOnClickListener {
-            findNavController().navigate(R.id.albumFragment)
+            val bundle = Bundle().apply {
+                putString("albumTitle", "WOODZ 5th Mini Album [OO-LI]")
+            }
+            findNavController().navigate(R.id.albumFragment, bundle)
         }
     }
 }

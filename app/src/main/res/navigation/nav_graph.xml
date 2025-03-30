@@ -34,6 +34,10 @@
             android:id="@+id/action_albumFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
 
+        <argument
+            android:name="albumTitle"
+            app:argType="string" />
+
     </fragment>
 
 </navigation>

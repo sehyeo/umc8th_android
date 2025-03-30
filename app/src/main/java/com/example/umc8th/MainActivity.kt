@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import com.example.umc8th.databinding.ActivityMainBinding
 import android.app.Activity
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 
@@ -37,5 +38,16 @@ class MainActivity : AppCompatActivity() {
             }
             getResultText.launch(intent)
         }
+
+        binding.mainMiniplayerBtn.setOnClickListener {
+            binding.mainMiniplayerBtn.visibility = View.GONE
+            binding.mainPauseBtn.visibility = View.VISIBLE
+        }
+
+        binding.mainPauseBtn.setOnClickListener {
+            binding.mainPauseBtn.visibility = View.GONE
+            binding.mainMiniplayerBtn.visibility = View.VISIBLE
+        }
+
     }
 }
