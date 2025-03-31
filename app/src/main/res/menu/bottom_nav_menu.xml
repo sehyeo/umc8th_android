@@ -3,24 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/navigation_home"
         android:icon="@drawable/ic_bottom_home"
         app:showAsAction="always"
         android:enabled="true"
         android:title="홈"
         tools:ignore="AlwaysShowAction" />
     <item
-        android:id="@+id/lookFragment"
+        android:id="@+id/navigation_compass"
         android:icon="@drawable/ic_bottom_compass"
         app:showAsAction="always"
         android:title="둘러보기" />
     <item
-        android:id="@+id/searchFragment"
+        android:id="@+id/navigation_search"
         android:icon="@drawable/ic_bottom_search"
         app:showAsAction="always"
         android:title="검색" />
     <item
-        android:id="@+id/lockerFragment"
+        android:id="@+id/navigation_mypage"
         android:icon="@drawable/ic_bottom_mypage"
         app:showAsAction="always"
         android:title="보관함" />
