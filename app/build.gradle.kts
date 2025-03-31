@@ -71,4 +71,5 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
     implementation("com.google.android.material:material:1.9.0")
     implementation("me.relex:circleindicator:2.1.6")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
 }
