@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.umc8th.databinding.FragmentAlbumBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class AlbumFragment : Fragment() {
 
@@ -33,14 +34,18 @@ class AlbumFragment : Fragment() {
         binding.btnArrowLeft.setOnClickListener {
             findNavController().navigate(R.id.action_albumFragment_to_navigation_home)
         }
+        val pagerAdapter = AlbumPagerAdapter(this)
+        binding.albumViewPager.adapter = pagerAdapter
 
-        binding.switchMix.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                binding.albumImage.setImageResource(R.drawable.woodz_album_mix)
-            } else {
-                binding.albumImage.setImageResource(R.drawable.woodz_album)
+        TabLayoutMediator(binding.albumTabLayout, binding.albumViewPager) { tab, position ->
+            tab.text = when (position) {
+                0 -> "수록곡"
+                1 -> "상세정보"
+                2 -> "영상"
+                else -> ""
             }
-        }
+        }.attach()
+
     }
 
 }
