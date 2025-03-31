@@ -1,17 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:padding="16dp">
 
     <TextView
-        android:id="@+id/tvDetailInfo"
+        android:id="@+id/labelAlbumTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="상세정보 화면"
+        android:text="앨범명"
+        android:textStyle="bold"
         android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contentAlbumTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OO-LI"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/labelAlbumTitle"
+        app:layout_constraintTop_toTopOf="@id/labelAlbumTitle"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/labelArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아티스트"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelAlbumTitle"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/contentArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WOODZ"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/labelArtist"
+        app:layout_constraintTop_toTopOf="@id/labelArtist"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/labelAgency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기획사"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelArtist"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/contentAgency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카카오엔터테인먼트"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/labelAgency"
+        app:layout_constraintTop_toTopOf="@id/labelAgency"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/labelDistributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="유통사"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelAgency"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/contentDistributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDAM엔터테인먼트"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/labelDistributor"
+        app:layout_constraintTop_toTopOf="@id/labelDistributor"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/labelAlbumIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="앨범소개"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/labelDistributor"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/contentAlbumIntro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="WOODZ 5th Mini Album [OO-LI]\n\n던져진 자유, 방황하는 우리.\n의도된 순수함에 가려진 의미는 우리가 찾던 것일까?"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/labelAlbumIntro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
