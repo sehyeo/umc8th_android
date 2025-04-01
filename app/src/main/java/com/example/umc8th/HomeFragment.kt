@@ -42,6 +42,8 @@ class HomeFragment : Fragment() {
         val panelAdapter = PanelAdapter(panels)
         binding.homePanelViewPager.adapter = panelAdapter
 
+        binding.homePanelIndicator.setViewPager(binding.homePanelViewPager)
+
         val bannerImages = listOf(
             R.drawable.img_home_viewpager_exp,
             R.drawable.img_home_viewpager_exp2
