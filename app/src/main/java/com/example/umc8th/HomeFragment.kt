@@ -25,18 +25,29 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 기존 앨범 클릭 이동
         binding.homeAlbum.setOnClickListener {
             val bundle = Bundle().apply {
                 putString("albumTitle", "WOODZ 5th Mini Album [OO-LI]")
             }
             findNavController().navigate(R.id.albumFragment, bundle)
         }
+
+        // 패널 데이터
+        val panels = listOf(
+            PanelData("포근하게 덮어주는 꿈의\n목소리", R.drawable.bg_mint),
+            PanelData("기분 좋은 바람이\n부는 여행지에서", R.drawable.bg_skyblue)
+        )
+
+        val panelAdapter = PanelAdapter(panels)
+        binding.homePanelViewPager.adapter = panelAdapter
+
         val bannerImages = listOf(
             R.drawable.img_home_viewpager_exp,
             R.drawable.img_home_viewpager_exp2
         )
-
-        val adapter = BannerAdapter(bannerImages)
-        binding.bannerViewPager.adapter = adapter
+        val bannerAdapter = BannerAdapter(bannerImages)
+        binding.bannerViewPager.adapter = bannerAdapter
     }
+
 }

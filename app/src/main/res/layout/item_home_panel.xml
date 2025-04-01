@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 배경 이미지 -->
+    <ImageView
+        android:id="@+id/panelBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_mint" />
+
+    <!-- 티켓, 설정 버튼 -->
+    <ImageView
+        android:id="@+id/panelTicketBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/btn_main_ticket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/panelSettingBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/btn_main_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/panelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="16dp"
+        android:text="포근하게 덮어주는 꿈의\n목소리"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/panelTicketBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 앨범 정보 텍스트 -->
+    <TextView
+        android:id="@+id/panelAlbumInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginStart="16dp"
+        android:text="총 214곡 2025.04.01"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/panelTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 앨범 1 -->
+    <ImageView
+        android:id="@+id/panelAlbum1Cover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/nmixx_album"
+        app:layout_constraintTop_toBottomOf="@id/panelAlbumInfo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/panelAlbum1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="High Horse"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/panelAlbum1Cover"
+        app:layout_constraintTop_toTopOf="@id/panelAlbum1Cover" />
+
+    <TextView
+        android:id="@+id/panelAlbum1Artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="NMIXX"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/panelAlbum1Cover"
+        app:layout_constraintTop_toBottomOf="@id/panelAlbum1Title" />
+
+    <!-- 앨범 2 -->
+    <ImageView
+        android:id="@+id/panelAlbum2Cover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/nmixx_album"
+        app:layout_constraintTop_toBottomOf="@id/panelAlbum1Cover"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/panelAlbum2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="KNOW ABOUT ME"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/panelAlbum2Cover"
+        app:layout_constraintTop_toTopOf="@id/panelAlbum2Cover" />
+
+    <TextView
+        android:id="@+id/panelAlbum2Artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="NMIXX"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/panelAlbum2Cover"
+        app:layout_constraintTop_toBottomOf="@id/panelAlbum2Title" />
+</androidx.constraintlayout.widget.ConstraintLayout>
