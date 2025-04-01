@@ -1,6 +1,8 @@
 package com.example.umc8th
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +12,10 @@ import com.example.umc8th.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentHomeBinding
+
+    private lateinit var slideHandler: Handler
+    private lateinit var slideRunnable: Runnable
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -50,6 +55,22 @@ class HomeFragment : Fragment() {
         )
         val bannerAdapter = BannerAdapter(bannerImages)
         binding.bannerViewPager.adapter = bannerAdapter
+
+        slideHandler = Handler(Looper.getMainLooper())
+        slideRunnable = object : Runnable {
+            override fun run() {
+                val currentItem = binding.homePanelViewPager.currentItem
+                val itemCount = panelAdapter.itemCount
+                val nextItem = if (currentItem == itemCount - 1) 0 else currentItem + 1
+                binding.homePanelViewPager.setCurrentItem(nextItem, true)
+                slideHandler.postDelayed(this, 3000) // 3초마다 반복
+            }
+        }
+        slideHandler.postDelayed(slideRunnable, 3000)
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        slideHandler.removeCallbacks(slideRunnable)
     }
 
 }
