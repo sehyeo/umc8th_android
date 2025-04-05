@@ -55,12 +55,13 @@ class MainActivity : ComponentActivity() {
         thread = Thread {
             while (isRunning) {
                 if (!paused) {
-                    Thread.sleep(100)
+                    Thread.sleep(5)
                     time++
                     runOnUiThread {
-                        val sec = time / 10
-                        val milli = time % 10
-                        binding.timeText.text = String.format("%02d.%d", sec, milli)
+                        val minute = time / 6000
+                        val second = (time / 100) % 60
+                        val milli = time % 100
+                        binding.timeText.text = String.format("%d:%02d.%02d", minute, second, milli)
                     }
                 }
             }
@@ -81,7 +82,7 @@ class MainActivity : ComponentActivity() {
     private fun clearStopwatch() {
         time = 0
         runOnUiThread {
-            binding.timeText.text = "00.0"
+            binding.timeText.text = "0:00.00"
         }
 
         if (paused) {
