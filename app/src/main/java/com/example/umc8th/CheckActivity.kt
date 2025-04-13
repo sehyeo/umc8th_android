@@ -13,6 +13,10 @@ class CheckActivity : ComponentActivity() {
         enableEdgeToEdge()
         binding = ActivityCheckBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // 저장된 메모 보여주기
+        val memoText = intent.getStringExtra("memo_text")
+        binding.textViewMemo.text = memoText ?: "저장된 메모가 없습니다."
     }
 
 }
