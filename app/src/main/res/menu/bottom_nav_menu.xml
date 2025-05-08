@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/sort"
+        android:title="분류" />
+
+    <item
+        android:id="@+id/navigation_social"
+        android:icon="@drawable/straighten"
+        android:title="길이" />
+
+    <item
+        android:id="@+id/navigation_record"
+        android:icon="@drawable/weight"
+        android:title="무게" />
+
+    <item
+        android:id="@+id/navigation_mypage"
+        android:icon="@drawable/search"
+        android:title="검색"
+        />
+
+</menu>
