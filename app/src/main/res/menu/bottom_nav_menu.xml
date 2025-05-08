@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/sort"
-        android:title="분류" />
-
+        android:id="@+id/pokemonFragment"
+        android:icon="@drawable/pokeball"
+        android:enabled="true"
+        android:title="포켓몬"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
     <item
-        android:id="@+id/navigation_social"
+        android:id="@+id/tagFragment"
+        android:icon="@drawable/tag"
+        android:title="태그"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/straightenFragment"
         android:icon="@drawable/straighten"
-        android:title="길이" />
-
+        android:title="길이"
+        app:showAsAction="always" />
     <item
-        android:id="@+id/navigation_record"
+        android:id="@+id/weightFragment"
         android:icon="@drawable/weight"
-        android:title="무게" />
-
-    <item
-        android:id="@+id/navigation_mypage"
-        android:icon="@drawable/search"
-        android:title="검색"
-        />
+        android:title="무게"
+        app:showAsAction="always" />
 
 </menu>
