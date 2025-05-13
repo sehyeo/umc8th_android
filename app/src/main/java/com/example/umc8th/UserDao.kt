@@ -22,4 +22,10 @@ class UserDao {
     fun getUserList(): Query?{
         return databaseReference
     }
+
+    // 수정
+    fun userUpdate(key: String, hashMap: HashMap<String, Any>): Task<Void>{
+
+        return databaseReference!!.child(key)!!.updateChildren(hashMap)
+    }
 }

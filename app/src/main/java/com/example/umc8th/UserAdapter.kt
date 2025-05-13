@@ -1,6 +1,8 @@
 package com.example.umc8th
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +32,17 @@ class UserAdapter(private val context: Context, private val userList:ArrayList<U
 
         holder.nameText.text = user.userName
         holder.ageText.text = user.userAge
+
+        holder.itemView.setOnClickListener {
+
+            // 사용자 수정화면으로 이동
+            val intent = Intent(context, UserUpdateActivity::class.java)
+            intent.putExtra("key", user.userKey)
+            intent.putExtra("name", user.userName)
+            intent.putExtra("age", user.userAge)
+            context.startActivity(intent)
+            (context as Activity).finish()
+        }
     }
 
     class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
