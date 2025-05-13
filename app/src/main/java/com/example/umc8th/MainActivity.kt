@@ -24,9 +24,4 @@ class MainActivity : ComponentActivity() {
         binding.emotionStamp5.setOnClickListener { navigateToEmotionActivity("angry") }
     }
 
-    private fun navigateToEmotionActivity(emotion: String) {
-        val intent = Intent(this, EmotionActivity::class.java)
-        intent.putExtra("emotion_type", emotion)
-        startActivity(intent)
-    }
 }
