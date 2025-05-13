@@ -28,4 +28,9 @@ class UserDao {
 
         return databaseReference!!.child(key)!!.updateChildren(hashMap)
     }
+
+    // 삭제
+    fun userDelete(key: String): Task<Void>{
+        return databaseReference!!.child(key).removeValue()
+    }
 }
