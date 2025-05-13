@@ -3,6 +3,7 @@ package com.example.umc8th
 import com.google.android.gms.tasks.Task
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.Query
 
 class UserDao {
     private var databaseReference: DatabaseReference? = null
@@ -15,5 +16,10 @@ class UserDao {
     // 등록
     fun add(user: User?): Task<Void>{
         return databaseReference!!.push().setValue(user)
+    }
+
+    // 조회
+    fun getUserList(): Query?{
+        return databaseReference
     }
 }

@@ -33,6 +33,13 @@ class MainActivity : ComponentActivity() {
                 Toast.makeText(this, "등록 실패: ${it.message}", Toast.LENGTH_SHORT).show()
             }
         }
+
+        // 사용자 목록 버튼 이벤트
+        binding.listBtn.setOnClickListener {
+
+            val intent: Intent = Intent(this@MainActivity, UserListActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

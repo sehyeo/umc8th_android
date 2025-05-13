@@ -30,4 +30,12 @@
         android:text="등록"
         android:textSize="25sp" />
 
+    <Button
+        android:id="@+id/list_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="사용자 목록"
+        android:textSize="25sp" />
+
 </LinearLayout>
