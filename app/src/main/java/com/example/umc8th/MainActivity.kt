@@ -5,6 +5,7 @@ import android.widget.ImageView
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import android.content.Intent
+import android.widget.Toast
 import com.example.umc8th.databinding.ActivityMainBinding
 
 class MainActivity : ComponentActivity() {
@@ -16,12 +17,22 @@ class MainActivity : ComponentActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 감정 스탬프 클릭 시 EmotionActivity로 이동 (Intent에 감정 타입 전달)
-        binding.emotionStamp1.setOnClickListener { navigateToEmotionActivity("happy") }
-        binding.emotionStamp2.setOnClickListener { navigateToEmotionActivity("excited") }
-        binding.emotionStamp3.setOnClickListener { navigateToEmotionActivity("normal") }
-        binding.emotionStamp4.setOnClickListener { navigateToEmotionActivity("worried") }
-        binding.emotionStamp5.setOnClickListener { navigateToEmotionActivity("angry") }
+        // 데이터베이스 클래스 객체 생성
+        val dao = UserDao()
+
+        binding.addBtn.setOnClickListener {
+
+            val name = binding.nameEdit.text.toString() // 이름
+            val age = binding.ageEdit.text.toString() // 나이
+
+            val user = User("", name, age)
+
+            dao.add(user)?.addOnSuccessListener {
+                Toast.makeText(this, "등록 성공", Toast.LENGTH_SHORT).show()
+            }?.addOnFailureListener {
+                Toast.makeText(this, "등록 실패: ${it.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
 }
